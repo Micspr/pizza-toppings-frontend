@@ -31,6 +31,11 @@ const toppings = [
     name: 'Kalamata Olives',
     deliciousness: 8
   }
+  {
+    id: shortId.generate(),
+    name: 'Bacon'
+    deliciousness: 10
+  }
 ]
 
 const getToppings = () => {

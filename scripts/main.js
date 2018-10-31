@@ -13,15 +13,24 @@ document.querySelector('form').addEventListener('submit', function(event){
   event.target.toppingName.value = ''
   event.target.deliciousness.value = ''
   
-  // add toppings
+  // // add toppings
+  // addTopping(name, deliciousness)
+  // const newTopping = {name, deliciousness}
+  // axios.post(`https://immense-lake-82822.herokuapp.com/toppings`, newTopping)
   addTopping(name, deliciousness)
-
-  const toppings = getToppings()
-  renderToppings(toppings)
+  .then(function() {
+    return getToppings()
+  })
+  .then(function(response) {
+    renderToppings(response.data.toppings)
+  })
 
 })
 
 
 // initial render of data
-const toppings = getToppings()
-renderToppings(toppings)
+// const toppings = getToppings()
+getToppings()
+.then(function(response) {
+  renderToppings(response.data.toppings)
+})

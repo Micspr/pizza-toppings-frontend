@@ -30,10 +30,10 @@ const toppings = [
     id: shortId.generate(),
     name: 'Kalamata Olives',
     deliciousness: 8
-  }
+  },
   {
     id: shortId.generate(),
-    name: 'Bacon'
+    name: 'Bacon',
     deliciousness: 10
   }
 ]
